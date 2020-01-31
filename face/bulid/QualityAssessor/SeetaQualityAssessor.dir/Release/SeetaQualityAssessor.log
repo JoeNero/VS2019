@@ -1,0 +1,12 @@
+﻿  Building Custom Rule G:/face/SeetaFace2-master/QualityAssessor/CMakeLists.txt
+  ClarityQuality.cpp
+  PoseQuality.cpp
+  QualityAssessor.cpp
+  ImageProcess.cpp
+  common_alignment.cpp
+  graphics2d.cpp
+G:\face\SeetaFace2-master\QualityAssessor\src\PoseQuality.cpp(139,12): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+G:\face\SeetaFace2-master\QualityAssessor\src\PoseQuality.cpp(140,11): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+G:\face\SeetaFace2-master\QualityAssessor\src\PoseQuality.cpp(141,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+    正在创建库 G:/face/bulid/lib/Release/SeetaQualityAssessor.lib 和对象 G:/face/bulid/lib/Release/SeetaQualityAssessor.exp
+  SeetaQualityAssessor.vcxproj -> G:\face\bulid\bin\Release\SeetaQualityAssessor.dll

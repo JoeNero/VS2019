@@ -1,0 +1,8 @@
+﻿  Building Custom Rule G:/face/SeetaFace2-master/FaceLandmarker/CMakeLists.txt
+  FaceLandmarker.cpp
+  FaceLandmarkerPrivate.cpp
+  ImageProcess.cpp
+  common_alignment.cpp
+  graphics2d.cpp
+    正在创建库 G:/face/bulid/lib/Release/SeetaFaceLandmarker.lib 和对象 G:/face/bulid/lib/Release/SeetaFaceLandmarker.exp
+  SeetaFaceLandmarker.vcxproj -> G:\face\bulid\bin\Release\SeetaFaceLandmarker.dll

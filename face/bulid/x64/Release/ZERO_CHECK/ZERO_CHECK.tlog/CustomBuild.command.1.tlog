@@ -1,0 +1,10 @@
+^G:\FACE\BULID\CMAKEFILES\698A46CB7CCD41D229009E43575971B5\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SG:/face/SeetaFace2-master -BG:/face/bulid --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/face/bulid/SeetaFace.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

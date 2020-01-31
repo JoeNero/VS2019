@@ -1,0 +1,10 @@
+﻿  Building Custom Rule G:/face/SeetaFace2-master/FaceRecognizer/CMakeLists.txt
+  FaceDatabase.cpp
+  FaceRecognizer.cpp
+  FaceRecognizerPrivate.cpp
+  ImageProcess.cpp
+  SeetaNetParseProto.cpp
+  common_alignment.cpp
+  graphics2d.cpp
+    正在创建库 G:/face/bulid/lib/Release/SeetaFaceRecognizer.lib 和对象 G:/face/bulid/lib/Release/SeetaFaceRecognizer.exp
+  SeetaFaceRecognizer.vcxproj -> G:\face\bulid\bin\Release\SeetaFaceRecognizer.dll

@@ -1,0 +1,37 @@
+# CMake generation dependency list for this directory.
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeCInformation.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeCXXInformation.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeCommonLanguageInclude.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeGenericSystem.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeInitializeConfigs.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeLanguageInformation.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakePackageConfigHelpers.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeRCInformation.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeSystemSpecificInformation.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CMakeSystemSpecificInitialize.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CheckCCompilerFlag.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CheckCSourceCompiles.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CheckCXXCompilerFlag.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CheckCXXSourceCompiles.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CheckFunctionExists.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CheckIncludeFile.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/CheckIncludeFileCXX.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/Compiler/MSVC-C.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/Compiler/MSVC-CXX.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/GNUInstallDirs.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/GenerateExportHeader.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/Platform/Windows-MSVC-C.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/Platform/Windows-MSVC-CXX.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/Platform/Windows-MSVC.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/Platform/Windows.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/Platform/WindowsPaths.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/WriteBasicConfigVersionFile.cmake
+G:/face/SeetaFace2-master/CMakeLists.txt
+G:/face/SeetaFace2-master/SeetaFace.pc.in
+G:/face/SeetaFace2-master/cmake/cmake_uninstall.cmake.in
+G:/face/bulid/CMakeFiles/3.15.5/CMakeCCompiler.cmake
+G:/face/bulid/CMakeFiles/3.15.5/CMakeCXXCompiler.cmake
+G:/face/bulid/CMakeFiles/3.15.5/CMakeRCCompiler.cmake
+G:/face/bulid/CMakeFiles/3.15.5/CMakeSystem.cmake

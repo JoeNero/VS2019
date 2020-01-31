@@ -1,0 +1,8 @@
+﻿  Building Custom Rule G:/face/SeetaFace2-master/FaceDetector/CMakeLists.txt
+  FaceDetector.cpp
+  FaceDetectorPrivate.cpp
+  ImageProcess.cpp
+  common_alignment.cpp
+  graphics2d.cpp
+    正在创建库 G:/face/bulid/lib/Release/SeetaFaceDetector.lib 和对象 G:/face/bulid/lib/Release/SeetaFaceDetector.exp
+  SeetaFaceDetector.vcxproj -> G:\face\bulid\bin\Release\SeetaFaceDetector.dll

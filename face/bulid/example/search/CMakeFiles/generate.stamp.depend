@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+D:/Opencv/opencv/build/OpenCVConfig-version.cmake
+D:/Opencv/opencv/build/OpenCVConfig.cmake
+D:/Opencv/opencv/build/x64/vc15/lib/OpenCVConfig.cmake
+D:/Opencv/opencv/build/x64/vc15/lib/OpenCVModules-debug.cmake
+D:/Opencv/opencv/build/x64/vc15/lib/OpenCVModules-release.cmake
+D:/Opencv/opencv/build/x64/vc15/lib/OpenCVModules.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake
+D:/Program Files/CMake/share/cmake-3.15/Modules/FindPackageMessage.cmake
+G:/face/SeetaFace2-master/example/search/CMakeLists.txt
+G:/face/SeetaFace2-master/example/search/UserTemplate.xml

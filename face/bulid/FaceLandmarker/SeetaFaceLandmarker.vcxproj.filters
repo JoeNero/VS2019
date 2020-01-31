@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\face\SeetaFace2-master\FaceLandmarker\src\seeta\FaceLandmarker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\face\SeetaFace2-master\FaceLandmarker\seeta\FaceLandmarkerPrivate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\face\SeetaFace2-master\FaceLandmarker\seeta\ImageProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\face\SeetaFace2-master\FaceLandmarker\seeta\common_alignment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\face\SeetaFace2-master\FaceLandmarker\seeta\graphics2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\face\SeetaFace2-master\FaceLandmarker\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{68CDB9E5-1CD2-325A-BFF5-E8C21BF6DDCA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+D:/Program Files/CMake/share/cmake-3.15/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+D:/Program Files/CMake/share/cmake-3.15/Modules/exportheader.cmake.in
+G:/face/SeetaFace2-master/FaceDetector/CMakeLists.txt
+G:/face/SeetaFace2-master/FaceDetector/FaceDetector.pc.in

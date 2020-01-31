@@ -1,0 +1,16 @@
+﻿  Building Custom Rule G:/face/SeetaFace2-master/SeetaNet/CMakeLists.txt
+  ReadFromSeetaNetLayer.cpp
+  SeetaNet.cpp
+  SeetaNetForward.cpp
+  SeetaNetIm2Col.cpp
+  SeetaNetMathCPU.cpp
+  SeetaNetParseProto.cpp
+  SeetaNetProto.cpp
+  pot.cpp
+  vat.cpp
+  canyon.cpp
+  cartridge.cpp
+  shotgun.cpp
+  box.cpp
+    正在创建库 G:/face/bulid/lib/Release/SeetaNet.lib 和对象 G:/face/bulid/lib/Release/SeetaNet.exp
+  SeetaNet.vcxproj -> G:\face\bulid\bin\Release\SeetaNet.dll

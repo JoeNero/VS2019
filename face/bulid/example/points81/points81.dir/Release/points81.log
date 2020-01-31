@@ -1,0 +1,23 @@
+﻿  Building Custom Rule G:/face/SeetaFace2-master/example/points81/CMakeLists.txt
+  example.cpp
+G:\face\SeetaFace2-master\example\points81\example.cpp(38,46): warning C4244: “参数”: 从“double”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+G:\face\SeetaFace2-master\example\points81\example.cpp(38,37): warning C4244: “参数”: 从“double”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+G:\face\SeetaFace2-master\example\points81\example.cpp(94,47): warning C4244: “参数”: 从“double”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+G:\face\SeetaFace2-master\example\points81\example.cpp(94,38): warning C4244: “参数”: 从“double”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+  points81.vcxproj -> G:\face\bulid\bin\Release\points81.exe

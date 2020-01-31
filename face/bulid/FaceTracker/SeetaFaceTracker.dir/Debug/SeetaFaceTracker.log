@@ -1,0 +1,5 @@
+﻿  Building Custom Rule G:/face/SeetaFace2-master/FaceTracker/CMakeLists.txt
+  FaceTracker.cpp
+G:\face\SeetaFace2-master\FaceTracker\src\seeta\FaceTracker.cpp(173,47): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+    正在创建库 G:/face/bulid/lib/Debug/SeetaFaceTracker-d.lib 和对象 G:/face/bulid/lib/Debug/SeetaFaceTracker-d.exp
+  SeetaFaceTracker.vcxproj -> G:\face\bulid\bin\Debug\SeetaFaceTracker-d.dll
