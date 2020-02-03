@@ -11,9 +11,14 @@
  mList.cpp		// 链表
  
  mArray.cpp		//
+ 
  固定大小，不支持插入。
  
- mDeque.cpp		//队列
+ mDeque.cpp		//双端数组
+ 
+ mQueue.cpp		//队列
+ 
+ 队列先进先出，只能操作队头和队尾，队头出
  
  
  
