@@ -43,7 +43,7 @@
  
  multiset允许容器中有重复的元素
  
- # mMap.cpp 
+ ### mMap.cpp 
  
  关联式容器，底层结构是用二叉树实现,里面的元素都是对组 pair存放
  
@@ -54,6 +54,12 @@
  ### mPair.cpp
  
  对组 :first和second访问  键值和值的绑定
+ 
+ ## 仿函数demo
+ 
+ ### mFunctor.cpp
+ 
+ 仿函数的基本使用
  
  
  
