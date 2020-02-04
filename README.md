@@ -1,3 +1,5 @@
+ @[toc]
+ 
  # STL_demo
  STL标准库下的demo
  ## 容器demo/container_demo
@@ -101,6 +103,11 @@
 			template<class T> bool logical_and<T> //逻辑与
 			template<class T> bool logical_or<T> //逻辑或
 			template<class T> bool logical_not<T> //逻辑非
+## 算法/mAlgorithm
+
+### mAlgorithm.cpp
+
+基础算法的使用
 
  
  
