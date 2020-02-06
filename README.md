@@ -1,6 +1,15 @@
 
  # STL_demo
  STL标准库下的demo
+ 
+ ## 内存管理
+ 
+	加入宏定义#define CRTDBG_MAP_ALLOC  
+	和头文件  #include <crtdbg.h> 
+	检测内存泄漏的函数_CrtDumpMemoryLeaks();
+	在main运行开始加定位内存泄漏的位置	_CrtSetBreakAlloc(222); //222是内存泄漏的警告标识符
+	
+ 
  ## C++基础
 
  ### Str
