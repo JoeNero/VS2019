@@ -2,7 +2,6 @@
 #define __LIST_H
 //One-way linked list
 //单向链表
-//clear()和析构函数内有内存泄漏
 #include <iostream>
 
 struct Node
@@ -32,6 +31,7 @@ void deletePoint(Node*,size_t);						//删除指定的节点
 void clear(Node*);									//清空链表
 
 void destroy(Node*);								//销毁链表
+Node* reverse(Node* head);							//翻转链表
 
 #endif // !__LIST_H
 

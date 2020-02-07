@@ -1,5 +1,6 @@
 #include "List.h"
 #include <iostream>
+#include "MyDebug.h"
 
 using namespace std;
 
@@ -44,12 +45,15 @@ void printList(Node* head)
 	else
 	{
 		Node* p = head;                 //另指针指向头结点
-		while (NULL != p->next)        //当指针的下一个地址不为空时，循环输出p的数据域
+		while (p->next !=NULL )        //当指针的下一个地址不为空时，循环输出p的数据域
 		{
 			p = p->next;               //p指向p的下一个地址
-			cout << p->data << " ";
+			cout << p->data << " ";	
+			
 		}
+		cout << endl;
 	}
+	
 }
 
 bool isEmpty(Node* head)
@@ -61,6 +65,7 @@ bool isEmpty(Node* head)
 	return false;
 }
 
+//获取链表长度
 size_t getLength(Node* head)
 {
 	int count = 0;                  //定义count计数
@@ -74,6 +79,7 @@ size_t getLength(Node* head)
 	return count;
 }
 
+//查找节点
 Node* searchPoint(Node* head, size_t n)
 {
 	Node* p = head;
@@ -98,6 +104,7 @@ Node* searchPoint(Node* head, size_t n)
 	}
 }
 
+//再指定位置插入节点
 void insertPoint(Node* head, size_t n, int data)
 {
 	if ((n < 1) || (n > getLength(head)))
@@ -122,6 +129,7 @@ void insertPoint(Node* head, size_t n, int data)
 	}
 }
 
+//头插
 void pushBack(Node* head, int data)
 {
 	Node* pNew = new Node;          //定义一个Node结点指针newNode
@@ -142,6 +150,7 @@ void pushBack(Node* head, int data)
 	}
 }
 
+//头插
 void pushFront(Node* head, int data)
 {
 	Node* newNode = new Node;           //定义新节点头
@@ -155,6 +164,7 @@ void pushFront(Node* head, int data)
 	p->next = newNode;
 }
 
+//尾删
 void popBack(Node* head)
 {
 	Node* p = head;          //创建一个指针指向头结点
@@ -177,6 +187,7 @@ void popBack(Node* head)
 	}
 }
 
+//头删
 void popFront(Node* head)
 {
 	Node* p = head;          //创建一个指针指向头结点
@@ -197,6 +208,7 @@ void popFront(Node* head)
 	}
 }
 
+//删除任意节点
 void deletePoint(Node* head, size_t n)
 {
 	Node* ptemp = searchPoint(head,n);      //创建一个占位节点
@@ -225,6 +237,7 @@ void deletePoint(Node* head, size_t n)
 	}
 }
 
+//清空链表
 void clear(Node* head)
 {
 	if (head == NULL)
@@ -243,9 +256,10 @@ void clear(Node* head)
 	head->next = NULL;                 //头结点的下一个节点指向NULL
 }
 
-void destroy(Node* head)								//销毁链表
+//销毁链表
+void destroy(Node* head)								
 {
-	Node* p = new Node;
+
 	if (NULL == head)
 	{
 		cout << "链表空" << endl;
@@ -253,9 +267,38 @@ void destroy(Node* head)								//销毁链表
 	}
 	while (head)
 	{
-		p = head->next;
+		Node* p = head->next;
 		delete head;
 		head = p;
 	}
-	delete p;
+}
+
+//链表翻转
+Node* reverse(Node* head)
+{
+	if (head == NULL)
+	{
+		return NULL;
+	}
+	else
+	{
+		Node* pCurrent;		//当前
+		Node* pPrev;		//
+		Node* pNext;
+		pPrev = NULL;
+		pCurrent = head->next;
+		while (pCurrent != NULL)
+		{
+			pNext = pCurrent->next;
+			if (pNext == NULL)
+			{
+				pCurrent->next = pPrev;
+				head->next = pCurrent;
+				return head;
+			}
+			pCurrent->next = pPrev;
+			pPrev = pCurrent;
+			pCurrent = pNext;
+		}
+	}
 }
