@@ -2,7 +2,7 @@
  # STL_demo
  STL标准库下的demo
  
- ## 内存管理
+ # 内存管理
  
 	加入宏定义#define CRTDBG_MAP_ALLOC  
 	和头文件  #include <crtdbg.h> 
@@ -10,24 +10,24 @@
 	在main运行开始加定位内存泄漏的位置	_CrtSetBreakAlloc(222); //222是内存泄漏的警告标识符
 	
  
- ## C++基础
+ # C++基础
 
- ### Str
+ ## Str
 			自写字符相关操作
 
 			字符拷贝操作
- ### 数据结构
+ # 数据结构
  
- #### 单向链表
+ ## 单向链表
  
 		函数版本:
 		
 		类版本:
 	
  
- ## 容器demo/container_demo
+ # 容器demo/container_demo
   -------------------------------------------------------------
- ### mVector.cpp	
+ ## mVector.cpp	
 
  
 			 向量容器
@@ -36,33 +36,33 @@
  
 
  
- ### mString.cpp	
+ ## mString.cpp	
  
- ### mList.cpp		
+ ## mList.cpp		
  
 			链表
 			
- ### mArray.cpp		
+ ## mArray.cpp		
 
 			固定大小，不支持插入。
 
- ### mDeque.cpp		
+ ## mDeque.cpp		
  
 			双端数组
 
- ### mQueue.cpp		
+ ## mQueue.cpp		
 
 			队列
  
 			队列先进先出，只能操作队头和队尾，队头出，不能随机访问，不能遍历
 
- ### mStack.cpp  	
+ ## mStack.cpp  	
 
 			栈
  
 			先进后厨，只能操作栈顶，不能随机范围，不支持遍历
 
- ### mSet.cpp		
+ ## mSet.cpp		
 
 			 关联式容器，底层结构是用二叉树实现,
 			 
@@ -70,7 +70,7 @@
 			 
 			 multiset允许容器中有重复的元素
 
- ### mMap.cpp 
+ ## mMap.cpp 
  
 			关联式容器，底层结构是用二叉树实现,里面的元素都是对组 pair存放
  
@@ -78,19 +78,19 @@
  
 			multimap允许容器中有重复的元素
 			
- ### mPair.cpp
+ ## mPair.cpp
 
 			对组 :first和second访问  键值和值的绑定
 			
 -------------------------------------------------------------
- ## 仿函数demo
+ # 仿函数demo
  
- ### mFunctor.cpp
+ ## mFunctor.cpp
  
 			仿函数的基本使用
 
 
- ### mPredicate.cpp
+ ## mPredicate.cpp
 
 			谓词:
 			返回bool类型的仿函数称为谓词
@@ -99,7 +99,7 @@
 						
 			如果operator()接受两个参数，那么叫做二元谓词
 
-### mBuiltInFunction.cpp
+## mBuiltInFunction.cpp
 
 			STL 内建了一些函数对象
 
@@ -130,9 +130,9 @@
 			template<class T> bool logical_and<T> //逻辑与
 			template<class T> bool logical_or<T> //逻辑或
 			template<class T> bool logical_not<T> //逻辑非
-## 算法/mAlgorithm
+# 算法/mAlgorithm
 
-### mAlgorithm.cpp
+## mAlgorithm.cpp
 
 基础算法的使用
 			遍历
@@ -187,7 +187,7 @@
 			value 统计的元素
 			-------------------------------------------------------------
 
-### mAlgorithm2.cpp
+## mAlgorithm2.cpp
 
 			-------------------------------------------------------------
 			常用排序算法
@@ -218,7 +218,7 @@
 
 
 
- ### mAlgorithm3.cpp
+ ## mAlgorithm3.cpp
  
  			-------------------------------------------------------------
 			copy		-- 容器内指定范围的元素拷贝到另一容器中
@@ -250,7 +250,7 @@
 			newvalue 替换的新元素
 			-------------------------------------------------------------
 			
-### mNumeric.cpp
+## mNumeric.cpp
 
 			#include <numeric>
 
@@ -271,7 +271,7 @@
 			value 填充的值
 			-------------------------------------------------------------
 			
-### mAlgorithm4.cpp
+## mAlgorithm4.cpp
 
 			常用集合算法
 			#include <algorithm>
@@ -308,9 +308,10 @@
 			dest 目标容器开始迭代器
 			-------------------------------------------------------------
 
- ## Debug
+ # Debug
  
 			TRACE()
+			内存泄露定位
 
 
 

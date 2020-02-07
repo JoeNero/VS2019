@@ -12,9 +12,17 @@ mList::mList()
 
 mList::~mList()
 {
-	//销毁写的有问题
-	//删除，抽空写回去
-
+	if (NULL == head)
+	{
+		cout << "链表空" << endl;
+		return;
+	}
+	while (head)
+	{
+		Node* p = head->next;
+		delete head;
+		head = p;
+	}
 }
 
 //创建一个单链表
@@ -54,7 +62,8 @@ void mList::printList()
 			p = p->next;               //p指向p的下一个地址
 			cout << p->data << " ";
 		}
-		cout << "len = " << m_len << endl;
+		cout << endl;
+		//cout << "len = " << m_len << endl;
 	}
 }
 
@@ -264,6 +273,34 @@ void mList::clear()
 	}
 	m_len = 0;
 	head->next = NULL;                 //头结点的下一个节点指向NULL
+}
+
+//翻转链表
+void mList::reverse()
+{
+	if ((head == nullptr) || (head->next == nullptr))
+	{
+		return;
+	}
+	else
+	{
+		Node* pCurrent;		//当前
+		Node* pPrev = nullptr;		//
+		Node* pNext;
+		pCurrent = head->next;
+		while (pCurrent != NULL)
+		{
+			pNext = pCurrent->next;
+			if (pNext == NULL)
+			{
+				pCurrent->next = pPrev;
+				head->next = pCurrent;
+			}
+			pCurrent->next = pPrev;
+			pPrev = pCurrent;
+			pCurrent = pNext;
+		}
+	}
 }
 
 

@@ -34,16 +34,7 @@ public:
 	void deletePoint(size_t);					//删除指定的节点
 
 	void clear();								//清空链表
-
-	//void* operator new(size_t size)
-	//{
-	//	void* p = malloc(size);
-	//	return (p);
-	//}
-	//void operator delete(void* p)
-	//{
-	//	free(p);
-	//}
+	void reverse();								//翻转链表
 
 private:
 	size_t m_len = 0;		//默认链表长度

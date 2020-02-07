@@ -276,16 +276,15 @@ void destroy(Node* head)
 //链表翻转
 Node* reverse(Node* head)
 {
-	if (head == NULL)
+	if ((head == nullptr)||(head->next == nullptr))
 	{
-		return NULL;
+		return head;
 	}
 	else
 	{
 		Node* pCurrent;		//当前
-		Node* pPrev;		//
+		Node* pPrev = nullptr;		//
 		Node* pNext;
-		pPrev = NULL;
 		pCurrent = head->next;
 		while (pCurrent != NULL)
 		{
@@ -300,5 +299,6 @@ Node* reverse(Node* head)
 			pPrev = pCurrent;
 			pCurrent = pNext;
 		}
+		return head;
 	}
 }
