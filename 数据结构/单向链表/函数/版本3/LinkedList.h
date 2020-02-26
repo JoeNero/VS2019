@@ -23,4 +23,5 @@ void printList(LinkList*);			//打印链表
 void revPrintList(LinkList*);		//逆序打印链表
 void pushBack(LinkList*, Elemtype);	//尾插
 void BubbleSort(LinkList*);			//链表的冒泡排序
+LinkList *getIntersectionNode(LinkList *headA, LinkList *headB);    //寻找链表的公共节点
 #endif // !_LINK_LIST_H

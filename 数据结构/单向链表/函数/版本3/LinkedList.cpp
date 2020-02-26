@@ -142,3 +142,15 @@ void BubbleSort(LinkList* head)
 		}
 	}
 }
+//寻找两个链表的公共节点
+LinkList *getIntersectionNode(LinkList *headA, LinkList *headB) {
+    LinkList *node1 = headA;
+    LinkList *node2 = headB;
+    
+    while (node1 != node2) {
+        node1 = node1 != NULL ? node1->next : headB;
+        node2 = node2 != NULL ? node2->next : headA;
+    }
+    return node1;
+}
+
