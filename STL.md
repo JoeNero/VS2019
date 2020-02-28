@@ -1,6 +1,24 @@
 # 1.容器
 
-## 1.1.vector
+## 1.1 array
+
+**array保存在栈中**
+
+```c++
+std::array<int, 4> arr= {1,2,3,4};
+
+int len = 4;
+std::array<int, len> arr = {1,2,3,4}; // 非法, 数组大小参数必须是常量表达式
+
+const int len = 4;
+std::array<int, len> arr = {1,2,3,4}; // 正确写法
+```
+
+## 1.2 vector
+
+不同的编译器实现的扩容方式不一样，vector 在VS2015中以1.5倍扩容，GCC以2倍扩容。
+
+**vector保存在堆中**
 
 ```cpp
 vector<vector<int>> v;
@@ -12,94 +30,14 @@ v[0].size();	//返回列数
 
 
 
-`decltype` 关键字是为了解决 auto 关键字只能对变量进行类型推导的缺陷而出现的。
 
-异或能解决一类数据中找到不重复的值
+## 1.3 list
 
-```c++
-int singleNumber(vector<int>& nums) {
-    if(nums.empty()) return 0;
-    int len = nums.size();
-    int temp = 0;
-    for(int i = 0 ; i < len ; i++){
-        temp ^=nums[i];
-    }
-    return temp;
-}
-```
-# 委托构造函数
+list 是双向循环链表 记住！！！
 
-```c++
-class Base {
-public:
-    int value1;
-    int value2;
-    Base() {
-        value1 = 1;
-    }
-    Base(int value) : Base() {  // 委托 Base() 构造函数
-        value2 = 2;
-    }
-};
-```
+## 1.4 forward_list
 
-# 继承构造
-
-在继承体系中，如果派生类想要使用基类的构造函数，需要在构造函数中显式声明。 
- 假若基类拥有为数众多的不同版本的构造函数，这样，在派生类中得写很多对应的“透传”构造函数。如下：
-
-```c++
-struct A
-{
-  A(int i) {}
-  A(double d,int i){}
-  A(float f,int i,const char* c){}
-  //...等等系列的构造函数版本
-}；
-struct B:A
-{
-  B(int i):A(i){}
-  B(double d,int i):A(d,i){}
-  B(folat f,int i,const char* c):A(f,i,e){}
-  //......等等好多个和基类构造函数对应的构造函数
-}；
-```
-
-C++11的继承构造：
-
-```c++
-struct A
-{
-  A(int i) {}
-  A(double d,int i){}
-  A(float f,int i,const char* c){}
-  //...等等系列的构造函数版本
-}；
-struct B:A
-{
-  using A::A;
-  //关于基类各构造函数的继承一句话搞定
-  //......
-}；
-```
-
-# lambda
-
-```
-int a = 0;
-auto f = [=] { return a; };
-
-a+=1;
-
-cout << f() << endl;       //输出0
-
-int a = 0;
-auto f = [&a] { return a; };
-
-a+=1;
-
-cout << f() <<endl;       //输出1
-```
+单向链表，标准库容器中唯一不提供size()方法的容器，当不需要双向迭代时，具备比list更高的空间利用率。
 
 # 2.智能指针
 
@@ -145,8 +83,20 @@ if(upt.get()!=nullptr)					//判空操作更安全
 }
 ```
 
+```c++
+unique_ptr<int> p1;          //创建空的智能指针
+p1.reset(new int(3));    //绑定动态对象
+unique_ptr<int> p2(new int(4)) ;        //创建时绑定动态对象
+cout << *p1 <<endl;
+cout << *p2 <<endl;
+//所有权发生变化
+int *p = p1.release();      //释放所有权
 
-
+unique_ptr<string> p_s1(new string("abc"));
+//    unique_ptr<string> p_s2 = std::move(p_s1);
+    cout << *p_s1 <<endl;
+//    cout << p_s2 <<endl;
+```
 ## 2.3	shared_ptr
 
  shared_ptr的原理：通过引用计数的方式来实现多个shared_ptr对象之间共享资源。
@@ -249,3 +199,112 @@ int main() {
 （a）的元素和最小的元素；
 （b）两个对象都包含指向第三个对象的指针；
 （c）STL容器包含指针。很多STL算法都支持复制和赋值操作，这些操作可用于shared_ptr，但不能用于unique_ptr（编译器发出warning）和auto_ptr（行为不确定）。如果你的编译器没有提供shared_ptr，可使用Boost库提供的shared_ptr
+
+# 3.类型推导
+
+## 3.1 auto
+
+编程时候常常需要把表达式的值付给变量,需要在声明变量的时候清楚的知道变量是什么类型。然而做到这一点并非那么容易(特别是模板中)，有时候根本做不到。为了解决这个问题，C++11新标准就引入了auto类型说明符，用它就能让编译器替我们去分析表达式所属的类型。和原来那些只对应某种特定的类型说明符(例如 int)不同。auto 让编译器通过初始值来进行类型推演。从而获得定义变量的类型，所以说 auto 定义的变量必须有初始值。
+
+```c++
+int i = 3;
+auto a = i,&b = i,*c = &i;//正确: a初始化为i的副本,b初始化为i的引用,c为i的指针.
+auto sz = 0, pi = 3.14;//错误,两个变量的类型不一样。
+```
+
+## 3.2 decltype
+
+`decltype` 关键字是为了解决 auto 关键字只能对变量进行类型推导的缺陷而出现的。
+
+```c++
+auto i = 1;
+decltype(i) i2 = i;
+cout  << i << "\t";
+cout << i2;
+```
+
+# 委托构造函数
+
+```c++
+class Base {
+public:
+    int value1;
+    int value2;
+    Base() {
+        value1 = 1;
+    }
+    Base(int value) : Base() {  // 委托 Base() 构造函数
+        value2 = 2;
+    }
+};
+```
+
+# 继承构造
+
+在继承体系中，如果派生类想要使用基类的构造函数，需要在构造函数中显式声明。 
+ 假若基类拥有为数众多的不同版本的构造函数，这样，在派生类中得写很多对应的“透传”构造函数。如下：
+
+```c++
+struct A
+{
+  A(int i) {}
+  A(double d,int i){}
+  A(float f,int i,const char* c){}
+  //...等等系列的构造函数版本
+}；
+struct B:A
+{
+  B(int i):A(i){}
+  B(double d,int i):A(d,i){}
+  B(folat f,int i,const char* c):A(f,i,e){}
+  //......等等好多个和基类构造函数对应的构造函数
+}；
+```
+
+C++11的继承构造：
+
+```c++
+struct A
+{
+  A(int i) {}
+  A(double d,int i){}
+  A(float f,int i,const char* c){}
+  //...等等系列的构造函数版本
+}；
+struct B:A
+{
+  using A::A;
+  //关于基类各构造函数的继承一句话搞定
+  //......
+}；
+```
+
+# lambda
+
+```
+int a = 0;
+auto f = [=] { return a; };
+
+a+=1;
+
+cout << f() << endl;       //输出0
+
+int a = 0;
+auto f = [&a] { return a; };
+
+a+=1;
+
+cout << f() <<endl;       //输出1
+```
+
+```c++
+int singleNumber(vector<int>& nums) {
+    if(nums.empty()) return 0;
+    int len = nums.size();
+    int temp = 0;
+    for(int i = 0 ; i < len ; i++){
+        temp ^=nums[i];
+    }
+    return temp;
+}
+```

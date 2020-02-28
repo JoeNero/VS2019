@@ -42,7 +42,7 @@ int main()
 }
 
 /*
-功能: 	- stack类
+功能: 	- queue
 		@param
 		@param
 		@param
