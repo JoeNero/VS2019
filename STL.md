@@ -42,7 +42,51 @@ List不能用STL 中的sort函数进行排序，而是要用自身的sort函数�
 ## 1.4 forward_list
 
 单向链表，标准库容器中唯一不提供size()方法的容器，当不需要双向迭代时，具备比list更高的空间利用率。
+## 1.5 stack
 
+基础示例:
+
+```cpp
+	stack<int> s;
+	s.push(10);
+	s.push(20);
+	s.push(30);
+
+	while (!s.empty())
+	{
+		//输出栈顶元素
+		cout << "栈顶元素" << s.top() << endl;
+		//弹出栈顶元素
+		s.pop();
+	}
+	cout << "栈的大小为:" << s.size() << endl;
+```
+emplace ://emplace函数可以将一个元素加入栈中，与push的区别在于：emplace可以直接传入Node的构造函数的参数，并将构造的元素加入栈中
+```cpp
+#include <iostream>       
+#include <stack>
+using namespace std;
+
+struct Node {
+    int a,b;
+    Node (int x, int y) {
+        a = x; b = y;
+    }
+};
+int main ()
+{
+    stack<Node> mystack;
+    mystack.emplace(1,2);        
+    //mystack.push(1,2);        //编译不通过，要达到上面的效果需要手动构造，例如mystack.push(Node(1,2));
+    Node p = mystack.top();
+    cout << p.a << " " << p.b << endl;
+    
+    stack<Node> my2;
+    my2.swap(mystack);            //swap函数可以交换两个栈的元素
+    cout << mystack.size() << " " << my2.size() << endl;
+  return 0;
+}
+```
 # 2.智能指针
 
 对于编译器来说，智能指针实际上是一个栈对象，并非指针类型，在栈对象生命期即将结束时，智能指针通过析构函数释放有它管理的堆内存。所有智能指针都重载了“operator->”操作符，直接返回对象的引用，用以操作对象。访问智能指针原来的方法则使用“.”操作符。
@@ -226,6 +270,37 @@ decltype(i) i2 = i;
 cout  << i << "\t";
 cout << i2;
 ```
+# 4.强制类型转换
+C++中四种类型转换是：static_cast, dynamic_cast, const_cast, reinterpret_cast
+
+## 4.1 const_cast
+
+**const_cast<类型说明符> (变量或表达式)**
+
+ 用于将const变量转换为非const类型
+
+const_cast用于强制去掉const这种不能被修改的常数特性，但需要特别注意的是const_cast不是用于去除变量的常量性，而是去除指向常数对象的指针或引用的常量性，其去除常量性的对象必须为指针或引用。
+
+## 4.2  static_cast
+
+static_cast<类型说明符> (变量或表达式)
+
+用于各种隐私转换，比如非const转const， void*转指针等， static_cast 能用于多态向上转化，如果向下转能成功但是不安全，结果未知。
+## 4.3 dynamic_cast
+
+dynamic_cast<类型说明符> (变量或表达式)
+
+用于动态类型转换，只能用于含有虚函数的类，用于类层次间的向上和向下转化。只能转指针或引用。向上转换：指的是子类向基类转换。 向下转换：指的是基类向子类转换。  他通过判断在执行到该语句的时候变量的运行时类型和要转换的类型是否相同来判断是否能够向下转换。    
+## 4.4 reinterpret_cast
+
+reinterpret_cast<类型说明符> (变量或表达式)
+
+几乎什么都可以转，比如将int转指针，可能会出问题，尽量少用。
+
+改变指针或引用的类型、将指针或引用转换为一个足够长度的整形、将整型转换为指针或引用类型。
+
+## 4.5 为什么不用C的强制转换？
+C的强制转换表面上看起来功能强大什么都能转换，但转化不够明确，不能进行错误检查，容易出错。
 
 # 委托构造函数
 
@@ -242,6 +317,8 @@ public:
     }
 };
 ```
+
+
 
 # 继承构造
 
